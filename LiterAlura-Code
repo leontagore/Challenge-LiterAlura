@@ -1,0 +1,86 @@
+Configurar la base de datos
+Crear una base de datos en PostgreSQL, por ejemplo:
+
+CREATE DATABASE literalura;
+
+
+Configurar credenciales en application.properties
+
+spring.datasource.url=jdbc:postgresql://localhost:5432/literalura
+spring.datasource.username=tu_usuario
+spring.datasource.password=tu_password
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+
+
+Ejecutar la aplicación
+
+mvn spring-boot:run
+
+📋 Menú de la aplicación
+
+La aplicación corre en consola y presenta un menú interactivo:
+
+1. Buscar libro por título
+2. Listar todos los libros
+3. Listar todos los autores
+4. Listar autores vivos en un año
+5. Listar libros por idioma
+0. Salir
+
+📊 Ejemplo de uso
+Buscar un libro por título
+
+Entrada:
+
+1
+Ingrese el título del libro: pride
+
+
+Salida:
+
+📖 Título: Pride and Prejudice
+✍️ Autor: Austen, Jane
+🌍 Idioma: EN
+⬇️ Descargas: 6493
+✅ Guardado en la base de datos
+
+📂 Estructura del proyecto
+literalura-challenge
+ ┣ 📂 src
+ ┃ ┣ 📂 main
+ ┃ ┃ ┣ 📂 java/com/alura/literalura
+ ┃ ┃ ┃ ┣ Main.java
+ ┃ ┃ ┃ ┣ model/
+ ┃ ┃ ┃ ┣ repository/
+ ┃ ┃ ┃ ┣ service/
+ ┃ ┃ ┃ ┗ controller/
+ ┃ ┃ ┗ 📂 resources
+ ┃ ┃    ┗ application.properties
+ ┣ pom.xml
+ ┗ README.md
+
+📸 Capturas de pantalla
+
+(Agrega aquí imágenes de la consola mostrando búsquedas y listados.)
+
+📌 Funcionalidades extra (opcional)
+
+📈 Estadísticas de descargas con DoubleSummaryStatistics.
+
+🏆 Top 10 libros más descargados.
+
+🔍 Búsqueda de autores por nombre.
+
+📑 Consultas avanzadas de autores (por nacimiento/fallecimiento).
+
+👨‍💻 Autor by Leontagore
+
+Desarrollado como parte del programa Oracle Next Education (ONE) junto con Alura Latam.
+
+💡 ¡Revisa el codigo y mejoralo 🚀
+
+
+---
+
+¿Quieres que también te genere este **README.md como archivo listo para subir al repositorio**, o prefieres que lo deje en texto aquí para que tú lo copies?
